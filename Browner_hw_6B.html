@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	<header>
+		<style>
+			.wrapper {
+				width: 700px;
+				margin: 0 auto;
+			}
+
+			#test{
+				width: 700px;
+				padding: 10px 0;
+				text-align: center;
+				background-color: pink;
+			}
+
+			h1 {
+				width: 700px;
+				padding: 10px 0;
+				text-align: center;
+				background-color: green;
+			}
+
+
+			.first{
+				display: none;
+				width: 600px;
+				height: 100px;
+				padding: 10px;
+				margin: 0 auto;
+				background-color: pink;
+			}
+
+			.second{
+				/*display: none;*/
+				width: 600px;
+				height: 100px;
+				padding: 10px;
+				margin: 0 auto;
+				background-color: lavender;
+			}
+
+		
+
+		</style>
+	</header>
+
+	<body>
+		<div class="wrapper">
+			<h1 id="test">This Is A Test</h1>
+
+			<p class="first">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A nihil repellat, quod, ipsa sequi ducimus dignissimos odio. Velit voluptatum ipsum accusamus nemo earum, nobis, facilis, rerum officia quod ratione sit.</p>
+
+			<h1>Test Results</h1>
+
+			<p class="second">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe architecto et, repellat fuga soluta, officiis tempore qui atque assumenda sapiente hic perspiciatis sequi animi. Aut mollitia voluptatem aperiam fugiat tenetur.</p>
+		</div>
+
+	
+		
+		<!--pulls jquery library-->
+		<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+		<!-- tell jquery not to run until page is loaded-->
+		<script>
+			$(document).ready(function() {
+				
+				var animateHeader = function() {
+					$("#test").animate( {opacity: .5}, 5000 )
+				};
+
+				$("#test").show(animateHeader)
+
+				$(".first").slideDown(1000, function() {
+					$(".first").animate({
+						opacity: 0.5
+					}, 2000);
+				});
+
+				$(".second").slideUp(1000, function() {
+					$(".second").slideDown(3000, function() {
+						$(".second").animate({
+							opacity: 0.5
+						}, 5000);
+					});
+				});
+
+
+			});
+		</script>
+
+	</body>
+</html>

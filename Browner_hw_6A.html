@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+	<header>
+		<style>
+		
+		</style>
+	</header>
+
+	<body>
+		
+		
+		<!--pulls jquery library-->
+		<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+		<!-- tell jquery not to run until page is loaded-->
+		<script>
+			$(document).ready(function(){
+				//selects
+				$("p") //tags
+				$(".class") //class
+				$("#id") //  id
+
+				// Anonumous function
+				// takes no argument
+				// can be passed into a function
+				// often uses in call backs
+
+				function({
+					alert("I am anonymous")
+				});
+
+				var someOtherFunction = function(){
+					alert("hello world");
+				}
+
+				// anonymous function
+				function someRunner(any)
+
+				// regular function
+				//anyFunction does not get used
+				function someRunner(anyfunction){
+					console.log(2+2);
+					anyFunction();
+				}
+				//instead anonymous is called
+				someRunner(someOtherFunction);
+
+				// show/hide
+				$("body").hide();
+				$("body").show();
+
+				// fade in/out
+				$("#id").fadeIn();
+				$("#id").fadeOut();
+
+				// fade in/out over time
+				$("#id").fadeIn()1000;
+				$("#id").fadeOut(1000);
+
+				// sliding
+				$("#sectiom-one").slideUp(1000);
+				$("#sectiom-one").slideDown(4000);
+
+				// animate
+				$(".class")animate( {
+					opacity: 0.25,
+					width: 70%
+				}, 2000);
+
+				// click event
+				$("ul li a").click(
+					function(){
+						alert("I'm Clicked");
+					}
+				)
+
+				// call back sequence
+				var animateMenu = function(){
+					$(".menu").animate( {
+						opacity: .5
+					})
+				}
+
+				$(".menu").show(animateMenu)
+
+
+			});
+		</script>
+
+	</body>
+</html>
